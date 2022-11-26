@@ -1,9 +1,16 @@
 # Web Scrape UDEMY
 
-## steps
+## Local Setup
 
-1. launch udemy
-2. search for a category
-3. get list of courses (5-7) per category
-4. write them to a file
+```
+git clone https://github.com/harireddy7/web-scrape-udemy.git
+npm install
+node index
+```
+
+## Process
+
+1. Launch udemy - `eg: https://www.udemy.com/topic/front-end-web-development/`
+3. Get list of courses on the page
+4. Write them to a file under data directory
 <!-- 5. repeat steps 2-4 for multiple categories -->
