@@ -23,3 +23,5 @@ node index
 node compiled
 // All the courses will be stored in `compliedCourses.json` file
 ```
+
+TODO: Make a webapp(UI) to pull courses by category
