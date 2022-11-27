@@ -11,7 +11,7 @@ function sleep(ms) {
 }
 
 const writeToFile = async (data) => {
-	fs.writeFileSync(path.join(__dirname, 'data', 'frontend.json'), data, {
+	fs.writeFileSync(path.join(__dirname, 'data', 'courses.json'), data, {
 		encoding: 'utf-8',
 	});
 };

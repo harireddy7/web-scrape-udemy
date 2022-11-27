@@ -5,12 +5,21 @@
 ```
 git clone https://github.com/harireddy7/web-scrape-udemy.git
 npm install
+```
+###### Create a directory `data`
+###### Create `courses.json` and `compliedCourses.json` files in it
+
+## Get courses through link
+
+```
 node index
+// All the courses will be stored in `courses.json` file
 ```
 
-## Process
+## Get all the courses from each category
+###### update `categories.js` for categories
 
-1. Launch udemy - `eg: https://www.udemy.com/topic/front-end-web-development/`
-3. Get list of courses on the page
-4. Write them to a file under data directory
-<!-- 5. repeat steps 2-4 for multiple categories -->
+```
+node compiled
+// All the courses will be stored in `compliedCourses.json` file
+```

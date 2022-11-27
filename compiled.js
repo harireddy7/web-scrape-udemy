@@ -10,32 +10,8 @@ puppeteer.use(StealthPlugin());
 
 const CATEGORIES = require('./categories');
 
-const appendToFile = async (data, action) => {
-	const filePath = path.join(__dirname, 'data', 'courses.json');
-	if (action === 'create') {
-		// create file and write to it
-		fs.writeFileSync(filePath, JSON.stringify([]), {
-			encoding: 'utf-8',
-		});
-		const content = fs.readFileSync(filePath);
-		const newData = [...JSON.parse(content), ...data];
-
-		fs.writeFileSync(filePath, JSON.stringify(newData), {
-			encoding: 'utf-8',
-		});
-	} else {
-		// append data to existing file
-		const content = fs.readFileSync(filePath);
-		const newData = [...JSON.parse(content), ...data];
-
-		fs.writeFileSync(filePath, JSON.stringify(newData), {
-			encoding: 'utf-8',
-		});
-	}
-};
-
 const writeToFile = async (data) => {
-	const filePath = path.join(__dirname, 'data', 'courses.json');
+	const filePath = path.join(__dirname, 'data', 'compiledCourses.json');
 	const fileData = fs.readFileSync(filePath, { encoding: 'utf-8' });
 	
 	const content = fileData ? [...JSON.parse(fileData), ...data] : [...data];
@@ -43,11 +19,6 @@ const writeToFile = async (data) => {
 	fs.writeFileSync(filePath, JSON.stringify(content), {
 		encoding: 'utf-8',
 	});
-};
-
-const getAction = (category) => {
-	const isFirstCategory = CATEGORIES[0]?.label === category?.label;
-	return isFirstCategory ? 'create' : 'write';
 };
 
 (async () => {
