@@ -61,7 +61,6 @@ async function launchScrape() {
 	});
 
 	await writeToFile(JSON.stringify(courses));
-	// await page.screenshot({ path: 'udemy.png', fullPage: true });
 
 	await browser.close();
 }

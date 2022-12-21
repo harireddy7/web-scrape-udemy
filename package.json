@@ -1,7 +1,7 @@
 {
   "name": "web-scrape-udemy",
   "version": "1.0.0",
-  "description": "",
+  "description": "An automation script to scrape courses data from udemy site based on the category",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
